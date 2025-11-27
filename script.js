@@ -114,7 +114,7 @@ window.addEventListener('load', () => {
     const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
     
     heroTl.fromTo('.hero-panel-main', 
-        { x: -50, autoAlpha: 0 }, // Use autoAlpha instead of opacity (prevents glitches)
+        { x: -50, autoAlpha: 0 }, 
         { x: 0, autoAlpha: 1, duration: 1 }
     )
     .fromTo('.hero-panel-visual', 
@@ -145,7 +145,7 @@ window.addEventListener('load', () => {
         );
     });
 
-    // 3. SKILL TREE (The section you said wasn't loading)
+    // 3. SKILL TREE
     gsap.utils.toArray('.skill-node').forEach((node, i) => {
         gsap.fromTo(node,
             { scale: 0.9, autoAlpha: 0 },
@@ -153,10 +153,10 @@ window.addEventListener('load', () => {
                 scale: 1,
                 autoAlpha: 1,
                 duration: 0.6,
-                delay: i * 0.1, // Stagger manually
+                delay: i * 0.1,
                 scrollTrigger: {
-                    trigger: node, // Trigger each node individually
-                    start: "top 95%", // Show almost immediately when it enters screen
+                    trigger: node,
+                    start: "top 95%", 
                 }
             }
         );

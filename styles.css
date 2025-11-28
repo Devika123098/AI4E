@@ -1182,4 +1182,110 @@ a {
         font-size: 1.6rem;
         padding: 0.9rem 1.5rem;
     }
+}/* =========================================
+   VISION CHAPTER - MISSION BRIEF CARDS
+   ========================================= */
+.vision-chapter .mission-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.vision-chapter .mission-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--skill-node-bg);
+    border: 2px solid var(--skill-node-border);
+    padding: 0;
+    min-height: auto;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.vision-chapter .mission-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 243, 255, 0.3);
+    border-color: var(--accent-cyan);
+}
+
+.vision-chapter .mission-rank {
+    background: #000;
+    color: var(--accent-yellow);
+    padding: 0.6rem 1.2rem;
+    font-family: var(--font-header);
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    writing-mode: horizontal-tb;
+    border-bottom: 2px solid var(--accent-yellow);
+}
+
+.vision-chapter .mission-details {
+    padding: 1.8rem;
+    color: var(--text-inverse);
+}
+
+.vision-chapter .mission-details h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--accent-cyan);
+}
+
+.vision-chapter .mission-details p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #a0a0a0;
+}
+
+.vision-chapter .mission-objectives {
+    margin: 0;
+    padding: 1rem 1.2rem;
+    background: rgba(0, 243, 255, 0.05);
+    border-left: 3px solid var(--accent-magenta);
+    font-size: 0.85rem;
+}
+
+.vision-chapter .mission-objectives strong {
+    color: var(--accent-yellow);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.vision-chapter .mission-objectives ul {
+    margin: 0;
+    padding-left: 1.3rem;
+    list-style-type: disc;
+}
+
+.vision-chapter .mission-objectives li {
+    margin-bottom: 0.5rem;
+    color: #a0a0a0;
+    line-height: 1.5;
+}
+
+.vision-chapter .mission-objectives li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive for Vision Chapter */
+@media (max-width: 1024px) {
+    .vision-chapter .mission-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .vision-chapter .mission-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .vision-chapter .mission-details {
+        padding: 1.2rem;
+    }
 }
